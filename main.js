@@ -2,7 +2,6 @@ let minSell = 0;
 document.getElementById("btn").addEventListener("click", calculateMin);
 
 function calculateMin() {
-    debug.log("clicked!");
     
     var quota = document.getElementById("quota").value;
     var moneyWanted = document.getElementById("money").value;
