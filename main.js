@@ -6,7 +6,12 @@ function calculateMin() {
     var moneyWanted = document.getElementById("money").value;
     // check if the entered values are numbers
     if (!isNaN(Number(quota)) && !isNaN(Number(moneyWanted))) {
-      minSell = Math.floor(moneyWanted - ((moneyWanted - quota) / 6));
+      if (minSell > moneyWanted) {
+        minSell = Math.floor(moneyWanted - ((moneyWanted - quota) / 6));
+      }
+      else {
+        minSell = moneyWanted;
+      }
       document.querySelector("h2").textContent = `Minimum scrap to sell: ${minSell}`;
     }
   }
