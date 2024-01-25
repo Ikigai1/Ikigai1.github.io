@@ -6,7 +6,7 @@ function calculateMin() {
     var moneyWanted = document.getElementById("money").value;
     // check if the entered values are numbers
     if (!isNaN(Number(quota)) && !isNaN(Number(moneyWanted))) {
-      if (minSell > moneyWanted) {
+      if (quota < moneyWanted) {
         minSell = Math.floor(moneyWanted - ((moneyWanted - quota) / 6));
       }
       else {
